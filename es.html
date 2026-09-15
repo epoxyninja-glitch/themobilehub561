@@ -77,14 +77,16 @@
   </script>
   <style>
     :root {
-      --navy: #0B1F3A;
-      --navy-2: #163056;
-      --yellow: #FFD100;
-      --ink: #0B1F3A;
-      --paper: #F7F4EE;
+      --navy: #E07A32;
+      --navy-2: #C45A1A;
+      --yellow: #F4EFE6;
+      --ink: #1A2744;
+      --paper: #FFF4EA;
       --card: #FFFFFF;
-      --muted: #5B6573;
-      --line: #D9D3C7;
+      --muted: #6B5346;
+      --line: #E6C4A8;
+      --blue: #2F5CB0;
+      --silver: #C5CAD1;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -94,7 +96,7 @@
     header.sticky {
       position: sticky; top: 0; z-index: 40;
       background: var(--navy); color: #fff;
-      border-bottom: 4px solid var(--yellow);
+      border-bottom: 4px solid var(--silver);
     }
     .nav {
       display: flex; align-items: center; justify-content: space-between;
@@ -105,7 +107,7 @@
     .word .the {
       font-family: Oswald, sans-serif; font-weight: 500;
       font-size: 11px; letter-spacing: 0.28em; line-height: 1;
-      color: var(--yellow);
+      color: var(--silver);
     }
     .word .hub {
       font-family: "Archivo Black", sans-serif;
@@ -118,7 +120,7 @@
       text-transform: uppercase; margin-right: 4px;
     }
     .lang a { color: rgba(255,255,255,.55); text-decoration: none; }
-    .lang a[aria-current="page"] { color: var(--yellow); }
+    .lang a[aria-current="page"] { color: var(--silver); }
     .lang span { color: rgba(255,255,255,.35); }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
@@ -126,7 +128,7 @@
       font-weight: 700; font-size: 13px; letter-spacing: 0.04em;
       text-transform: uppercase; border-radius: 2px;
     }
-    .btn-call { background: var(--yellow); color: var(--navy); }
+    .btn-call { background: var(--blue); color: #fff; }
     .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
     .hero { padding: 40px 0 28px; }
     .kicker {
@@ -170,7 +172,7 @@
       background: var(--navy); color: #d7deea; padding: 28px 0 36px;
       font-size: 14px;
     }
-    footer a { color: var(--yellow); }
+    footer a { color: var(--silver); }
     footer .word .hub { color: #fff; }
     footer p { margin-top: 8px; }
 
@@ -181,12 +183,12 @@
     <div class="wrap nav">
       <a class="brand" href="#top">
         <svg viewBox="0 0 256 256" aria-hidden="true">
-          <g fill="none" stroke="#FFD100" stroke-width="14" stroke-dasharray="56 28" transform="rotate(-11.25 128 128)">
+          <g fill="none" stroke="#C5CAD1" stroke-width="14" stroke-dasharray="56 28" transform="rotate(-11.25 128 128)">
             <circle cx="128" cy="128" r="108"/>
             <circle cx="128" cy="128" r="82"/>
             <circle cx="128" cy="128" r="56"/>
           </g>
-          <circle cx="128" cy="128" r="28" fill="#FFD100"/>
+          <circle cx="128" cy="128" r="28" fill="#2F5CB0"/>
         </svg>
         <span class="word">
           <span class="the">THE</span><br />
