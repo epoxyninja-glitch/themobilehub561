@@ -6,7 +6,7 @@
   <title>The Mobile Hub · Phone Repair in West Palm Beach</title>
   <meta name="description" content="Phone repair, unlocking, prepaid, and accessories at 4879 Okeechobee Blvd, West Palm Beach. Ask for Margie. Mon–Sat 10am–7pm. 561-623-7844." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://epoxyninja-glitch.github.io/themobilehub561/margie.jpg" />
+  <meta property="og:image" content="https://themobilehub561.com/mh-cover.jpg" />
   <meta property="og:title" content="The Mobile Hub · Ask for Margie" />
   <meta property="og:description" content="Phone repair on Okeechobee. 4879 Okeechobee Blvd, West Palm Beach. Mon–Sat 10am–7pm. 561-623-7844." />
   <meta property="og:url" content="https://themobilehub561.com/" />
@@ -28,6 +28,7 @@
     "inLanguage": ["en", "es"],
     "availableLanguage": ["English", "Spanish"],
     "telephone": "+1-561-623-7844",
+    "image": "https://themobilehub561.com/shop-sign.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "4879 Okeechobee Blvd",
@@ -40,7 +41,8 @@
     "hasMap": "https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417",
     "sameAs": [
       "https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417",
-      "https://www.facebook.com/TheMobileHubShop","https://www.yelp.com/biz/the-mobile-hub-west-palm-beach"
+      "https://www.facebook.com/TheMobileHubShop",
+      "https://www.yelp.com/biz/the-mobile-hub-west-palm-beach"
     ],
     "openingHoursSpecification": [
       {
@@ -58,7 +60,7 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Computer Services", "alternateName": "Servicio de computadoras" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Prepaid Wireless", "alternateName": "Planes prepago" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Solutions", "alternateName": "Soluciones para negocios" } }
-    ]    ,
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Services",
@@ -75,13 +77,14 @@
   </script>
   <style>
     :root {
-      --navy: #E07A32;
-      --navy-2: #C45A1A;
-      --yellow: #F4EFE6;
+      --navy: #1A2744;
+      --navy-2: #2A3B5C;
+      --orange: #C4521A;
+      --orange-hot: #E07A32;
       --ink: #1A2744;
-      --paper: #FFF4EA;
+      --paper: #FFF6EE;
       --card: #FFFFFF;
-      --muted: #6B5346;
+      --muted: #5C4A3E;
       --line: #E6C4A8;
       --blue: #2F5CB0;
       --silver: #C5CAD1;
@@ -94,31 +97,31 @@
     header.sticky {
       position: sticky; top: 0; z-index: 40;
       background: var(--navy); color: #fff;
-      border-bottom: 4px solid var(--silver);
+      border-bottom: 4px solid var(--orange);
     }
     .nav {
       display: flex; align-items: center; justify-content: space-between;
       gap: 12px; padding: 10px 0;
     }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .brand svg { width: 40px; height: 40px; flex: none; }
+    .brand svg { width: 44px; height: 44px; flex: none; }
     .word .the {
       font-family: Oswald, sans-serif; font-weight: 500;
       font-size: 11px; letter-spacing: 0.28em; line-height: 1;
-      color: var(--silver);
+      color: var(--orange-hot);
     }
     .word .hub {
       font-family: "Archivo Black", sans-serif;
       font-size: 18px; letter-spacing: 0.02em; line-height: 1.05;
     }
-    .actions { display: flex; align-items: center; gap: 8px; }
+    .actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
     .lang {
       display: inline-flex; align-items: center; gap: 6px;
       font-family: Oswald, sans-serif; font-size: 12px; letter-spacing: 0.14em;
       text-transform: uppercase; margin-right: 4px;
     }
     .lang a { color: rgba(255,255,255,.55); text-decoration: none; }
-    .lang a[aria-current="page"] { color: var(--silver); }
+    .lang a[aria-current="page"] { color: var(--orange-hot); }
     .lang span { color: rgba(255,255,255,.35); }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
@@ -126,9 +129,17 @@
       font-weight: 700; font-size: 13px; letter-spacing: 0.04em;
       text-transform: uppercase; border-radius: 2px;
     }
-    .btn-call { background: var(--blue); color: #fff; }
+    .btn-call { background: var(--orange); color: #fff; }
     .btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
-    .hero { padding: 40px 0 28px; }
+    .subnav {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      padding: 0 0 10px;
+      font-family: Oswald, sans-serif; font-size: 12px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .subnav a { color: rgba(255,255,255,.7); text-decoration: none; }
+    .subnav a:hover { color: #fff; }
+    .hero { padding: 36px 0 20px; }
     .kicker {
       font-family: Oswald, sans-serif; letter-spacing: 0.22em;
       font-size: 12px; color: var(--muted); text-transform: uppercase;
@@ -139,41 +150,53 @@
       font-size: clamp(32px, 6vw, 56px); line-height: 0.95;
       letter-spacing: -0.02em; margin-bottom: 14px;
     }
-    .lede { font-size: 18px; color: var(--navy-2); max-width: 36ch; margin-bottom: 22px; }
+    .lede { font-size: 18px; color: var(--navy-2); max-width: 38ch; margin-bottom: 22px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
     .btn-dark { background: var(--navy); color: #fff; }
     .btn-line { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
-    .services { padding: 10px 0 36px; }
-    .grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
-    @media (min-width: 760px) { .grid { grid-template-columns: repeat(4, 1fr); } }
-    .tile {
-      background: var(--card); border: 1px solid var(--line);
-      padding: 16px 14px 14px;
+    .btn-orange { background: var(--orange); color: #fff; }
+    .hero-row {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 28px;
     }
-    .tile h3 { font-family: Oswald, sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-    .tile p { font-size: 14px; color: var(--muted); }
-    .why, .memories, .find { padding: 8px 0 36px; }
-    h2 {
-      font-family: "Archivo Black", sans-serif; font-size: 28px;
-      line-height: 1; margin-bottom: 10px;
-    }
-    .why p, .find p, .memories p { max-width: 58ch; color: var(--navy-2); font-size: 17px; line-height: 1.45; }
-
-    .hero-photo { margin-top: 24px; }
     .hero-photo img {
-      width: 220px; height: 220px;
+      width: 180px; height: 180px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
+      border: 4px solid var(--orange);
+    }
+    .services { padding: 10px 0 20px; }
+    .grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+    @media (min-width: 760px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+    a.tile {
+      background: var(--card); border: 1px solid var(--line);
+      padding: 16px 14px 14px; text-decoration: none; display: block;
+    }
+    a.tile:hover { border-color: var(--orange); }
+    a.tile h3 { font-family: Oswald, sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; color: var(--navy); }
+    a.tile p { font-size: 14px; color: var(--muted); }
+    .detail, .why, .memories, .find { padding: 18px 0 28px; }
+    .detail { border-top: 1px solid var(--line); }
+    .detail h2, h2 {
+      font-family: "Archivo Black", sans-serif; font-size: 26px;
+      line-height: 1.05; margin-bottom: 10px;
+    }
+    .detail p, .why p, .find p, .memories p {
+      max-width: 58ch; color: var(--navy-2); font-size: 17px; line-height: 1.45;
+      margin-bottom: 10px;
+    }
+    .detail .hero-actions { margin-top: 8px; }
+    .bleed {
+      width: 100%; display: block; margin: 16px 0 8px;
+      border: 1px solid var(--line);
     }
     footer {
       background: var(--navy); color: #d7deea; padding: 28px 0 36px;
       font-size: 14px;
     }
-    footer a { color: var(--silver); }
+    footer a { color: var(--orange-hot); }
     footer .word .hub { color: #fff; }
     footer p { margin-top: 8px; }
-
   </style>
 </head>
 <body>
@@ -181,12 +204,13 @@
     <div class="wrap nav">
       <a class="brand" href="#top">
         <svg viewBox="0 0 256 256" aria-hidden="true">
-          <g fill="none" stroke="#C5CAD1" stroke-width="14" stroke-dasharray="56 28" transform="rotate(-11.25 128 128)">
-            <circle cx="128" cy="128" r="108"/>
-            <circle cx="128" cy="128" r="82"/>
-            <circle cx="128" cy="128" r="56"/>
+          <g fill="none" stroke="#C5CAD1" stroke-width="16" stroke-linecap="butt">
+            <path d="M168 56 A96 96 0 0 1 168 200"/>
+            <path d="M188 40 A120 120 0 0 1 188 216"/>
+            <path d="M208 24 A144 144 0 0 1 208 232"/>
           </g>
-          <circle cx="128" cy="128" r="28" fill="#2F5CB0"/>
+          <circle cx="128" cy="128" r="70" fill="none" stroke="#2F5CB0" stroke-width="18"/>
+          <circle cx="128" cy="128" r="46" fill="#D7DDE4"/>
         </svg>
         <span class="word">
           <span class="the">THE</span><br />
@@ -203,30 +227,100 @@
         <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417">Map</a>
       </div>
     </div>
+    <div class="wrap subnav">
+      <a href="#repair">Repair</a>
+      <a href="#unlock">Unlock</a>
+      <a href="#prepaid">Prepaid</a>
+      <a href="#find">Find us</a>
+    </div>
   </header>
 
   <main id="top">
     <section class="wrap hero">
-      <p class="kicker">West Palm Beach · 561</p>
-      <h1>Phone problem?<br />Bring it to Margie.</h1>
-      <p class="lede">Repairs. Unlocking. Prepaid. Accessories. Computers.</p>
-      <div class="hero-actions">
-        <a class="btn btn-dark" href="tel:5616237844">Call 561-623-7844</a>
-        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417">Directions</a>
+      <div class="hero-row">
+        <div>
+          <p class="kicker">West Palm Beach · Since 2009</p>
+          <h1>Phone problem?<br />Bring it to Margie.</h1>
+          <p class="lede">Repairs. Unlocking. Prepaid. Accessories. Computers. A bench on Okeechobee — not a call center.</p>
+          <div class="hero-actions">
+            <a class="btn btn-orange" href="tel:5616237844">Call 561-623-7844</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417">Directions</a>
+          </div>
+        </div>
+        <p class="hero-photo"><img src="margie.jpg" alt="Margie at The Mobile Hub" width="180" height="180"></p>
       </div>
     </section>
-      <p class="hero-photo"><img src="margie.jpg" alt="Margie at The Mobile Hub" width="220" height="220"></p>
 
     <section class="wrap services" id="services">
       <div class="grid">
-        <article class="tile"><h3>Phone Repair</h3><p>Screens, batteries, back glass, ports.</p></article>
-        <article class="tile"><h3>Phone Unlocking</h3><p>Carrier unlock work. We check if your phone is eligible. Ask at the counter.</p></article>
-        <article class="tile"><h3>Cellphones</h3><p>Working devices when she has them.</p></article>
-        <article class="tile"><h3>Accessories</h3><p>Cases, glass, chargers.</p></article>
-        <article class="tile"><h3>Prepaid</h3><p>T-Mobile authorized. Ultra. Simple Mobile. AT&amp;T Prepaid. Lyca. Cricket. Gen Mobile. h2o.</p></article>
-        <article class="tile"><h3>Computers</h3><p>Setup and the small jobs shops skip.</p></article>
-        <article class="tile"><h3>Business</h3><p>Lines and devices for a shop that has to answer.</p></article>
-        <article class="tile"><h3>Ask for Margie</h3><p>The regulars already do.</p></article>
+        <a class="tile" href="#repair"><h3>Phone Repair</h3><p>Screens, batteries, back glass, ports.</p></a>
+        <a class="tile" href="#unlock"><h3>Phone Unlocking</h3><p>We check if your phone is eligible. Ask at the counter.</p></a>
+        <a class="tile" href="#phones"><h3>Cellphones</h3><p>Working devices when she has them.</p></a>
+        <a class="tile" href="#accessories"><h3>Accessories</h3><p>Cases, glass, chargers.</p></a>
+        <a class="tile" href="#prepaid"><h3>Prepaid</h3><p>T-Mobile authorized. Ultra. Simple Mobile. AT&amp;T Prepaid. Lyca. Cricket. Gen Mobile. h2o.</p></a>
+        <a class="tile" href="#computers"><h3>Computers</h3><p>Setup and the small jobs shops skip.</p></a>
+        <a class="tile" href="#business"><h3>Business</h3><p>Lines and devices for a shop that has to answer.</p></a>
+        <a class="tile" href="#why"><h3>Ask for Margie</h3><p>The regulars already do.</p></a>
+      </div>
+    </section>
+
+    <section class="wrap detail" id="repair">
+      <h2>Phone repair</h2>
+      <p>Cracked screen. Dead battery. Port that will not charge. Bring the phone to 4879 Okeechobee. Margie looks at it at the counter and tells you what she can do.</p>
+      <p>No ticket number. No call center. The work happens on the bench in the shop.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="tel:5616237844">Call the shop</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417">Bring it in</a>
+      </div>
+    </section>
+
+    <section class="wrap detail" id="unlock">
+      <h2>Phone unlocking</h2>
+      <p>Carrier unlock work is on the door for a reason. Bring the phone. She checks whether it is eligible before anything else starts.</p>
+      <p>Ask at the counter. That is the whole process.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="tel:5616237844">Ask Margie</a>
+      </div>
+    </section>
+
+    <section class="wrap detail" id="phones">
+      <h2>Cellphones</h2>
+      <p>Working phones when she has them on the floor. Inventory moves. Call first if you need a specific model.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="tel:5616237844">Call 561-623-7844</a>
+      </div>
+    </section>
+
+    <section class="wrap detail" id="accessories">
+      <h2>Accessories</h2>
+      <p>Cases, glass, chargers — the wall is the catalog. Come look. What she stocks is what she can put in your hand today.</p>
+      <div class="hero-actions">
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417">See the wall</a>
+      </div>
+    </section>
+
+    <section class="wrap detail" id="prepaid">
+      <h2>Prepaid</h2>
+      <p>T-Mobile authorized dealer. Ultra Mobile. Simple Mobile. AT&amp;T Prepaid. Lyca. Cricket. Gen Mobile. h2o. The carriers on the floor are the carriers she sells.</p>
+      <p>Plans change. She will tell you what is actually on the counter today.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="tel:5616237844">Call about a plan</a>
+      </div>
+    </section>
+
+    <section class="wrap detail" id="computers">
+      <h2>Computers</h2>
+      <p>Setup, the small jobs, and the work bigger shops skip. Bring it in and ask.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="tel:5616237844">Call the shop</a>
+      </div>
+    </section>
+
+    <section class="wrap detail" id="business">
+      <h2>Business</h2>
+      <p>Lines and devices for a shop that has to answer the phone. Talk to Margie about what you actually need — not a bundle written in another city.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="tel:5616237844">Talk to Margie</a>
       </div>
     </section>
 
@@ -238,9 +332,13 @@
 
     <section class="wrap memories" id="memories">
       <h2>Memories with Margie</h2>
-      <p>Years of phones. Years of trust.</p>
-      <p>What’s your Memory with Margie? Ask at the counter.</p>
-      <p><a href="https://www.yelp.com/biz/the-mobile-hub-west-palm-beach" rel="noopener">Reviews on Yelp</a></p>
+      <p>Since 2009. The wall still has the kids’ drawings next to the register.</p>
+      <img class="bleed" src="shop-sign.jpg" alt="The Mobile Hub sign on the orange wall at 4879 Okeechobee Blvd" width="1400" height="1050">
+      <p>What’s your memory with Margie? Leave it where the next person can find it.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417">Find us on Google</a>
+        <a class="btn btn-line" href="https://www.yelp.com/biz/the-mobile-hub-west-palm-beach" rel="noopener">Reviews on Yelp</a>
+      </div>
     </section>
 
     <section class="wrap find" id="find">
@@ -249,17 +347,20 @@
         <strong>4879 Okeechobee Blvd</strong><br />
         West Palm Beach, FL 33417<br />
         <a href="tel:5616237844">561-623-7844</a><br />
-        Mon–Sat 10am–7pm · Closed Sunday<br />
-        <a href="https://www.yelp.com/biz/the-mobile-hub-west-palm-beach" rel="noopener">Reviews on Yelp</a>
+        Mon–Sat 10am–7pm · Closed Sunday
       </p>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="tel:5616237844">Call</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=The+Mobile+Hub+4879+Okeechobee+Blvd+West+Palm+Beach+FL+33417">Map</a>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
       <span class="word"><span class="the">THE</span> <span class="hub">MOBILE HUB</span></span>
-      <p>UR Mobile Hub, LLC · West Palm Beach</p>
-      <p><a href="tel:5616237844">561-623-7844</a> · <a href="https://www.yelp.com/biz/the-mobile-hub-west-palm-beach" rel="noopener">Reviews on Yelp</a> · <a href="es.html" hreflang="es" lang="es">Español</a></p>
+      <p>UR Mobile Hub, LLC · West Palm Beach · Since 2009</p>
+      <p><a href="tel:5616237844">561-623-7844</a> · <a href="https://www.yelp.com/biz/the-mobile-hub-west-palm-beach" rel="noopener">Yelp</a> · <a href="es.html" hreflang="es" lang="es">Español</a></p>
     </div>
   </footer>
 </body>
